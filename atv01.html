@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia e Hora</title>
+    <link rel="stylesheet" href="styleatv1.css">
+</head>
+<body>
+    <header>
+        <div id="titulo-header">
+            <h1>Hora do Dia</h1>
+        </div>
+    </header>
+    <section>
+        <div class="pai">
+            <div class="filho">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Feito com <strong>amor</strong> por emynha!</p>
+    </footer>
+    <script>
+        const imagens = {
+            noite: 'https://www.papeiseparede.com.br/4692-thickbox_default/papel-de-parede-a-noite-estrelada-por-vincent-van-gogh.jpg.webp', 
+            dia: 'https://www.artmajeur.com/medias/hd/b/a/bastien-alleaume/blog/van-gogh-le-semeur-1888-dapres-millet.jpg', 
+            tarde: 'https://dasartes.com.br/dasartes.com.br/wp-content/uploads/2023/05/13_van.webp'
+        }
+        var agora = new Date();
+        
+        var hora = agora.getHours();
+        var body = document.body;
+        var pai = window.document.querySelector('div.pai');
+        var filho = window.document.querySelector('div.filho');
+        function diaehora (){
+            if (hora < 12) {
+                pai.querySelector('div.filho').innerHTML
+                body.classList.add('bomdia');
+                filho.innerHTML = `<img src="${imagens.dia}" alt="Imagem de bom dia" />`;
+                document.querySelector('.pai').prepend(document.createElement('p'));
+document.querySelector('.pai p').id = 'texto-hora';
+document.querySelector('.pai p').textContent = `Agora são ${hora}h, Bom dia <3`;
+document.querySelector('.pai p').classList.add('fonte-estilizada');
+                
+            } else if (hora <= 18) {
+                pai.querySelector('div.filho').innerHTML
+                body.classList.add("por-do-sol");
+                filho.innerHTML = `<img src="${imagens.tarde}" alt="Imagem de boa tarde" />`; 
+                document.querySelector('.pai').prepend(document.createElement('p'));
+document.querySelector('.pai p').id = 'texto-hora';
+document.querySelector('.pai p').textContent = `Agora são ${hora}h, Bom tarde <3`;
+document.querySelector('.pai p').classList.add('fonte-estilizada');
+            } else {
+                pai.querySelector('div.filho').innerHTML
+                body.classList.add('noite');
+                filho.innerHTML = `<img src="${imagens.noite}" alt="Imagem de boa noite" />`;
+                document.querySelector('.pai').prepend(document.createElement('p'));
+document.querySelector('.pai p').id = `texto-hora`;
+document.querySelector('.pai p').textContent = `Agora são ${hora}h, Boa noite <3`;
+document.querySelector('.pai p').classList.add('fonte-estilizada');
+
+            }
+        }
+        diaehora();
+        
+
+    </script>
+</body>
+</html>

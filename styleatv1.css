@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+#titulo-header {
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;;
+}/*caso queira centralização horizontal deixando no meio */
+.por-do-sol {
+    color: #023f0c;
+    background: linear-gradient(135deg, #2e812b, #bbecbd);
+}
+.bomdia {
+    color: #d4841b;
+    background: linear-gradient(135deg, #e7cc33, #f5efe0);
+}
+.noite {
+    
+    color: #000000;
+    background: linear-gradient(135deg, #090230, #5a7ad1);
+}
+
+.pai {
+    background: white;
+    padding: 90px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 70%;
+    max-width: 600px;
+}
+.filho {
+    width: 450px;
+    height: 450px;
+    margin: 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.filho img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fonte-estilizada {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+footer {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
